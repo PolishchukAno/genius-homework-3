@@ -1,0 +1,502 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/poppins-v20-latin-300.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/poppins-v20-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/poppins-v20-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/poppins-v20-latin-900.woff2') format('woff2');
+}
+:root {
+  --color-brand-normal: #819b57;
+  --color-brand-dark: #465929;
+  --color-primari-light: #faf4ea;
+  --color-primari-dark: #31261a;
+  --color-data: #a18268;
+  --color-brand-light: #cfcfbc;
+  --color-secondary-dark: #a18268;
+  --color-form-input: #a18267;
+}
+/* base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+a {
+  display: inline-block;
+}
+.section {
+  padding: 48px 0;
+}
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.section {
+  padding: 48px 0;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--color-primari-light);
+  color: var(--color-primari-dark);
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+}
+.link {
+  color: var(--color-primari-light);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.link:hover {
+  color: var(--color-brand-normal);
+}
+/* button */
+.button {
+  color: var(--color-primari-light);
+  background-color: var(--color-brand-normal);
+  border: 2px solid var(--color-brand-normal);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 16px 32px;
+  transition: transform 1s;
+}
+.button:hover {
+  color: var(--color-brand-dark);
+  border-radius: 8px;
+  background: var(--color-primari-light);
+  transform: scale(1.02);
+}
+.section-title {
+  margin-bottom: 80px;
+  font-size: 64px;
+  line-height: 1.26;
+}
+.section-title.centered {
+  text-align: center;
+}
+
+/* header */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 32px;
+}
+.header-conteiner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.header-nav {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  gap: 40px;
+}
+.header-menu {
+  display: flex;
+  gap: 64px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+/* hero section */
+.hero-section {
+  padding: 272px 0;
+  background-image: linear-gradient(
+      102.76deg,
+      rgba(18, 18, 17, 0.78) 2.03%,
+      rgba(18, 18, 17, 0.6) 58.46%,
+      rgba(18, 18, 17, 0) 90.36%
+    ),
+    url('../imeges/hero-fone.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+.hero-title {
+  font-family: 'Poppins', sans-serif;
+  color: var(--color-primari-light);
+  text-align: center;
+  font-size: 128px;
+  font-weight: 900;
+}
+.hero-title .accent {
+  color: var(--color-brand-normal);
+}
+
+/* triger-section*/
+.hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.triger-section {
+  background-color: var(--color-brand-normal);
+  padding: 16px 0;
+}
+.triger {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.triger-name {
+  color: var(--color-primari-light);
+  font-size: 20px;
+  font-weight: 300;
+}
+/* traditions-section */
+.traditions-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.traditions-content {
+  max-width: 710px;
+}
+.traditions-section .section-title {
+  margin-bottom: 42px;
+}
+.traditions-text-bakery {
+  margin-bottom: 42px;
+}
+.traditions-text-merega {
+  max-width: 330px;
+  margin-bottom: 0;
+}
+.traditions-section .accent {
+  color: var(--color-brand-normal);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.traditions-section .accenttwo {
+  color: var(--color-brand-normal);
+  font-weight: 600;
+}
+.basker-man {
+  border-radius: 400px 400px 0px 0px;
+}
+/* shefs-section */
+.shefs-title {
+  margin: 0 auto 80px;
+  position: relative;
+}
+.shefs-title::after,
+.shefs-title::before {
+  position: absolute;
+  bottom: 24px;
+  width: 352px;
+  border: 2px solid var(--color-brand-light);
+  content: '';
+}
+.shefs-title::before {
+  left: 0;
+}
+.shefs-title::after {
+  right: 0;
+}
+.shefs-accent {
+  color: var(--color-brand-dark);
+}
+.shefs-list {
+  display: flex;
+  gap: 40px 30px;
+  flex-wrap: wrap;
+}
+.shef-item {
+  flex-basis: calc((100% - 30px) / 2);
+}
+.card-shef {
+  display: flex;
+  gap: 30px;
+}
+
+.shef-foto {
+  border-radius: 4px 4px 4px 200px;
+  box-shadow: -16px 16px 0 0 var(--color-primari-light),
+    -16px 16px 0 2px var(--color-secondary-dark);
+}
+.name-title {
+  margin-bottom: 16px;
+  font-size: 40px;
+  font-weight: 600;
+}
+/* format-section */
+.format-content {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+.format-list {
+  display: flex;
+  gap: 20px;
+}
+.format-item {
+  flex-basis: calc(100% / 3);
+}
+.format-card {
+  background-image: linear-gradient(
+    180deg,
+    rgba(49, 38, 26, 0) 55.21%,
+    rgba(49, 38, 26, 0.71) 72.92%,
+    var(--color-primari-dark) 100%
+  );
+  width: 349px;
+  height: 444px;
+  border-radius: 16px;
+  border: 1px solid lightgray; /*удалить*/
+  padding: 24px;
+  transition: transform 0.2s;
+}
+.format-card:hover {
+  transform: scale(1.01);
+}
+.format-title {
+  color: var(--color-primari-light);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 80px;
+}
+.format-text {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--color-primari-light);
+}
+/* carusel */
+.format-carusel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-primari-dark);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  fill: var(--color-primari-dark);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.format-carusel:hover {
+  transform: scale(1.2);
+  background-color: var(--color-primari-dark);
+  fill: var(--color-primari-light);
+}
+.format-carusel.next {
+  transform: rotate(180deg);
+  transition: transform 0.2s;
+}
+.format-carusel.next:hover {
+  transform: scale(1.2) rotate(180deg);
+}
+
+/* contact-section */
+.contact-section {
+  padding: 48px 0 96px;
+}
+.contact-content {
+  display: flex;
+  gap: 32px;
+}
+.contact-maps {
+  flex-shrink: 0;
+  border: none;
+  border-radius: 16px;
+}
+.contact-text {
+  color: var(--color-brand-dark);
+}
+.politic-text {
+  font-size: 12px;
+}
+/* footer */
+.footer {
+  padding: 32px 0;
+}
+.footer-content {
+  display: flex;
+  gap: 20px;
+}
+.footer-nav {
+  display: flex;
+  flex-basis: 50%;
+  gap: 20px;
+}
+.footer-addres {
+  display: flex;
+  flex-basis: 50%;
+  gap: 20px;
+}
+.footer-logo,
+.footer-menu {
+  flex-grow: 1;
+}
+.addres-list,
+.data-info {
+  flex-grow: 1;
+}
+
+.data-text {
+  color: var(--color-data);
+}
+.icon-footer {
+  fill: var(--color-primari-light);
+}
+.footer {
+  position: relative;
+  background-image: url('../imeges/footer-fons.png');
+  background-color: var(--color-primari-dark);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.footer::before {
+  position: absolute;
+  background-image: url(../imeges/decjr-bread.png);
+  background-repeat: no-repeat;
+  width: 180px;
+  height: 120px;
+  bottom: 0;
+  content: '';
+}
+.footer::after {
+  position: absolute;
+  background-image: url(../imeges/decor-bread2.png);
+  background-repeat: no-repeat;
+  width: 378px;
+  height: 187px;
+  bottom: 0;
+  right: 0;
+  content: '';
+}
+/* нужно выносить общее для уменьшения кода , но пока не буду  и футер стили перенести  */
+
+/*  MODAL */
+.backdrop {
+  padding: 20px 0;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal {
+  padding: 128px;
+  position: relative;
+  background-color: var(--color-primari-light);
+  border-radius: 32px;
+  width: 100%;
+  height: 100%;
+  max-width: 880px;
+  max-height: 880px;
+  overflow-y: auto;
+}
+.modal-btn-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+
+/* FORM */
+.form-fild {
+  margin-bottom: 32px;
+}
+.form-input {
+  padding: 16px 42px;
+  width: 100%;
+  border: 1px solid var(--color-form-input);
+  border-radius: 8px;
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 1.17;
+}
+.form-label {
+  display: block;
+}
+.form-input:focus {
+  border-color: var(--color-brand-normal);
+  outline: none;
+}
+.form-input::placeholder {
+  color: var(--color-form-input);
+  font-size: 16px;
+  line-height: 1.17;
+}
+.form-input:focus::placeholder {
+  color: var(--color-primari-dark);
+}
+.form-button {
+  display: block;
+  margin: 0 auto 24px;
+}
+.form-politic {
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 500;
+  max-width: 210px;
+}
+.form-link {
+  color: var(--color-primari-dark);
+  text-decoration: none;
+}
+.form-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
